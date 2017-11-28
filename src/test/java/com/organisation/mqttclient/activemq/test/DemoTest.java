@@ -96,7 +96,7 @@ public class DemoTest extends AbstractBaseTest {
     }
     
     @AfterClass(alwaysRun = true)
-    public void disconnectSubscriberAndReleaseConnection() throws SkMqttException {
+    public void disconnectClientAndReleaseConnectionResources() throws SkMqttException {
         
         if (this.subscriber.isConnected()) {
             
